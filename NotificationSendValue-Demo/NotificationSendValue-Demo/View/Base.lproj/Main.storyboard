@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First View-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="FirstView" id="BYZ-38-t0r" customClass="FirstView" customModule="NotificationSendValue_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UR0-H5-P3m">
+                                <rect key="frame" x="118.5" y="318.5" width="138" height="30"/>
+                                <state key="normal" title="發送通知給第二畫面"/>
+                                <connections>
+                                    <action selector="pushNotificationToSecondView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5A6-93-rsj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKW-VR-vjs">
+                                <rect key="frame" x="133.5" y="406" width="108" height="30"/>
+                                <state key="normal" title="跳頁到第二畫面"/>
+                                <connections>
+                                    <action selector="goToSecondView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lDI-8I-bRp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="這裡是第一畫面" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="fVW-DK-Ym6">
+                                <rect key="frame" x="126" y="88" width="121.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vio-bH-mxS">
+                                <rect key="frame" x="163" y="167" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fVW-DK-Ym6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="126" id="F7W-IK-ND8"/>
+                            <constraint firstItem="UR0-H5-P3m" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0449775" id="KrC-9P-Luu"/>
+                            <constraint firstItem="UR0-H5-P3m" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="MJW-fd-j2D"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="SKW-VR-vjs" secondAttribute="trailing" constant="133.5" id="Pyy-LG-We5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SKW-VR-vjs" secondAttribute="bottom" constant="231" id="THi-pc-MSn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fVW-DK-Ym6" secondAttribute="trailing" constant="127.5" id="iQB-Hv-H0H"/>
+                            <constraint firstItem="SKW-VR-vjs" firstAttribute="centerX" secondItem="UR0-H5-P3m" secondAttribute="centerX" id="ihd-Ll-95J"/>
+                            <constraint firstItem="SKW-VR-vjs" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="133.5" id="j8F-MK-Biw"/>
+                            <constraint firstItem="fVW-DK-Ym6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="88" id="vKM-o6-MmF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firstViewSwitch" destination="Vio-bH-mxS" id="Kml-3F-Khl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-383" y="88"/>
+        </scene>
+        <!--Second View-->
+        <scene sceneID="jCz-uh-MKp">
+            <objects>
+                <viewController storyboardIdentifier="SecondView" id="o4G-D1-NbR" customClass="SecondView" customModule="NotificationSendValue_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v25-bW-BLT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87V-kR-4aB">
+                                <rect key="frame" x="118.5" y="318.5" width="138" height="30"/>
+                                <state key="normal" title="發送通知給第三畫面"/>
+                                <connections>
+                                    <action selector="pushNotificationToThirdView:" destination="o4G-D1-NbR" eventType="touchUpInside" id="0y3-OK-hze"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3D-vp-Cav">
+                                <rect key="frame" x="133.5" y="406" width="108" height="30"/>
+                                <state key="normal" title="跳頁到第三畫面"/>
+                                <connections>
+                                    <action selector="goToThirdView:" destination="o4G-D1-NbR" eventType="touchUpInside" id="ofs-ND-UXu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="這裡是第二畫面" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="4vF-EW-G5z">
+                                <rect key="frame" x="126" y="88" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="htU-Yz-PIt">
+                                <rect key="frame" x="163" y="167" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qA4-Ms-pzx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qA4-Ms-pzx" firstAttribute="bottom" secondItem="q3D-vp-Cav" secondAttribute="bottom" constant="231" id="7rG-Z5-aF6"/>
+                            <constraint firstItem="4vF-EW-G5z" firstAttribute="top" secondItem="qA4-Ms-pzx" secondAttribute="top" constant="88" id="9Aw-MZ-G9R"/>
+                            <constraint firstItem="q3D-vp-Cav" firstAttribute="centerX" secondItem="87V-kR-4aB" secondAttribute="centerX" id="Hsg-Sn-azP"/>
+                            <constraint firstItem="qA4-Ms-pzx" firstAttribute="trailing" secondItem="4vF-EW-G5z" secondAttribute="trailing" constant="127" id="P62-M7-56C"/>
+                            <constraint firstItem="4vF-EW-G5z" firstAttribute="leading" secondItem="qA4-Ms-pzx" secondAttribute="leading" constant="126" id="Plh-Zg-4t7"/>
+                            <constraint firstItem="q3D-vp-Cav" firstAttribute="leading" relation="lessThanOrEqual" secondItem="qA4-Ms-pzx" secondAttribute="leading" constant="133.5" id="boo-md-zeZ"/>
+                            <constraint firstItem="87V-kR-4aB" firstAttribute="height" secondItem="v25-bW-BLT" secondAttribute="height" multiplier="0.0449775" id="dVz-xd-obo"/>
+                            <constraint firstItem="87V-kR-4aB" firstAttribute="centerX" secondItem="qA4-Ms-pzx" secondAttribute="centerX" id="fcv-sc-PN2"/>
+                            <constraint firstItem="qA4-Ms-pzx" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="q3D-vp-Cav" secondAttribute="trailing" constant="133.5" id="jeV-NF-O3f"/>
+                            <constraint firstItem="87V-kR-4aB" firstAttribute="centerY" secondItem="qA4-Ms-pzx" secondAttribute="centerY" id="vYg-4V-msi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="secondViewSwitch" destination="htU-Yz-PIt" id="1EZ-e4-EWd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a0s-YB-gXl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="308" y="88"/>
+        </scene>
+        <!--Third View-->
+        <scene sceneID="Kpf-qC-CQH">
+            <objects>
+                <viewController storyboardIdentifier="ThirdView" id="z1W-4h-3Wk" customClass="ThirdView" customModule="NotificationSendValue_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fnm-Zg-Y4A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksA-pX-izI">
+                                <rect key="frame" x="118.5" y="318.5" width="138" height="30"/>
+                                <state key="normal" title="發送通知給第一畫面"/>
+                                <connections>
+                                    <action selector="pushNotificationToFirstView:" destination="z1W-4h-3Wk" eventType="touchUpInside" id="X2P-Uf-k6t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dfc-0W-Yp4">
+                                <rect key="frame" x="133.5" y="406" width="108" height="30"/>
+                                <state key="normal" title="跳頁到第一畫面"/>
+                                <connections>
+                                    <action selector="goToFirstView:" destination="z1W-4h-3Wk" eventType="touchUpInside" id="rNh-UH-i24"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="這裡是第三畫面" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Dq3-kJ-dKj">
+                                <rect key="frame" x="126" y="88" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Be7-1S-aRS">
+                                <rect key="frame" x="163" y="167" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="P03-iy-8JL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="P03-iy-8JL" firstAttribute="trailing" secondItem="Dq3-kJ-dKj" secondAttribute="trailing" constant="127" id="BXD-qk-pkl"/>
+                            <constraint firstItem="ksA-pX-izI" firstAttribute="centerX" secondItem="P03-iy-8JL" secondAttribute="centerX" id="EwK-oJ-Xjg"/>
+                            <constraint firstItem="Dfc-0W-Yp4" firstAttribute="leading" relation="lessThanOrEqual" secondItem="P03-iy-8JL" secondAttribute="leading" constant="133.5" id="GyN-l2-1Kz"/>
+                            <constraint firstItem="P03-iy-8JL" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Dfc-0W-Yp4" secondAttribute="trailing" constant="133.5" id="Hcc-0g-rKJ"/>
+                            <constraint firstItem="Dq3-kJ-dKj" firstAttribute="leading" secondItem="P03-iy-8JL" secondAttribute="leading" constant="126" id="Ltc-jf-iPE"/>
+                            <constraint firstItem="Dq3-kJ-dKj" firstAttribute="top" secondItem="P03-iy-8JL" secondAttribute="top" constant="88" id="OG6-Hd-LG5"/>
+                            <constraint firstItem="ksA-pX-izI" firstAttribute="centerY" secondItem="P03-iy-8JL" secondAttribute="centerY" id="TO3-MZ-Dln"/>
+                            <constraint firstItem="ksA-pX-izI" firstAttribute="height" secondItem="Fnm-Zg-Y4A" secondAttribute="height" multiplier="0.0449775" id="qIc-SH-pXO"/>
+                            <constraint firstItem="P03-iy-8JL" firstAttribute="bottom" secondItem="Dfc-0W-Yp4" secondAttribute="bottom" constant="231" id="v6Q-wp-Tr8"/>
+                            <constraint firstItem="Dfc-0W-Yp4" firstAttribute="centerX" secondItem="ksA-pX-izI" secondAttribute="centerX" id="z3V-U2-Tfd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="thirdViewSwitch" destination="Be7-1S-aRS" id="nT2-aj-4w1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5e8-hT-mF5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1009" y="88"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
