@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UR0-H5-P3m">
-                                <rect key="frame" x="118.5" y="318.5" width="138" height="30"/>
-                                <state key="normal" title="發送通知給第二畫面"/>
+                                <rect key="frame" x="100" y="318.5" width="175" height="30"/>
+                                <state key="normal" title="建立第一畫面的 Observer"/>
                                 <connections>
-                                    <action selector="pushNotificationToSecondView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5A6-93-rsj"/>
+                                    <action selector="createFirstViewObserver:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fY0-7J-w9I"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKW-VR-vjs">
@@ -73,10 +73,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87V-kR-4aB">
-                                <rect key="frame" x="118.5" y="318.5" width="138" height="30"/>
-                                <state key="normal" title="發送通知給第三畫面"/>
+                                <rect key="frame" x="100" y="318.5" width="175" height="30"/>
+                                <state key="normal" title="建立第二畫面的 Observer"/>
                                 <connections>
-                                    <action selector="pushNotificationToThirdView:" destination="o4G-D1-NbR" eventType="touchUpInside" id="0y3-OK-hze"/>
+                                    <action selector="createSecondViewObserver:" destination="o4G-D1-NbR" eventType="touchUpInside" id="uQ5-UZ-MUE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3D-vp-Cav">
@@ -129,10 +129,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksA-pX-izI">
-                                <rect key="frame" x="118.5" y="318.5" width="138" height="30"/>
-                                <state key="normal" title="發送通知給第一畫面"/>
+                                <rect key="frame" x="100" y="318.5" width="175" height="30"/>
+                                <state key="normal" title="建立第三畫面的 Observer"/>
                                 <connections>
-                                    <action selector="pushNotificationToFirstView:" destination="z1W-4h-3Wk" eventType="touchUpInside" id="X2P-Uf-k6t"/>
+                                    <action selector="createThirdViewObserver:" destination="z1W-4h-3Wk" eventType="touchUpInside" id="0hl-oO-wE0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dfc-0W-Yp4">
